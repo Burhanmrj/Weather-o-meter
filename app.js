@@ -65,7 +65,7 @@ app.post("/",function(req,res){
 				country= ", "+parsedData.sys.country;
 				pressure="Pressure: "+parsedData.main.pressure+"hpa";
 				humidity="Humidity: "+parsedData.main.humidity+"%";
-				visibility ="Visibility: " +parsedData.visibility+"m";
+				visibility ="Visibility: " +(parsedData.visibility)/1000+"km";
 				wind= "wind: "+parsedData.wind.speed+"m/s";
 				res.render("header",{	temperature:temperature,
 										url:url,
