@@ -264,7 +264,7 @@ a:hover{
     text-align:center;
     font-size: 30px;
 }
- @media only screen and (max-device-width: 480px) {
+ @media (max-device-width: 480px) and (min-width: 330px) {
         .details{
      width: 90%;
 
@@ -272,15 +272,31 @@ a:hover{
   .doc{
     width:90%;
   }
-  .current .temp{
-    font-size:40px;
+  #link{
+    font-size:30px;
   }
-
+  p{
+    font-size:17px;
+  }
+  .current .temp{
+    font-size:35px;
+  }
   .first{
       width:90%;
+      font-size:15px;
+      margin-left:  0;
+      padding-left:   0;
+      margin-bottom:  0;
   }
   .second{
     width:90%;
+    font-size:15px;
+     margin-left:  0;
+    padding-left: 0;
+    margin-top:0;
+  }
+   #title{
+    font-size:30px;
   }
 }
 @media(max-device-width:760px) and (min-width:481px ){
@@ -293,17 +309,17 @@ a:hover{
     width:90%;
   }
 }
-@media only screen and (max-width: 270px) {
-  #title{
-    font-size:30px;
-  }
+@media(max-width: 329px) and (min-width:272px) {
+ 
   .first{
+     width:90%;
       font-size:15px;
       margin-left:  0;
       padding-left:   0;
       margin-bottom:  0;
   }
   .second{
+     width:90%;
      font-size:15px;
      margin-left:  0;
     padding-left: 0;
@@ -316,6 +332,17 @@ a:hover{
     font-size:17px;
   }
   .current .temp{
-    font-size:35px;
+    font-size:30px;
   }
+   #title{
+    font-size:30px;
+  }
+     .details{
+     width: 90%;
+
+  }
+  .doc{
+    width:90%;
+  }
+
 }
