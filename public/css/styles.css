@@ -41,7 +41,7 @@ p{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  
 }
 
 header {
@@ -266,13 +266,50 @@ a:hover{
 }
  @media only screen and (max-device-width: 480px) {
         .details{
-     width: 100%;
+     width: 90%;
 
   }
   .doc{
-    width:100%;
+    width:90%;
   }
   .current .temp{
     font-size:40px;
   }
 
+  .first{
+      width:90%;
+  }
+  .second{
+    width:90%;
+  }
+}
+@media(max-device-width:760px) and (min-width:481px ){
+
+
+    .first{
+      width:90%;
+  }
+  .second{
+    width:90%;
+  }
+}
+@media only screen and (max-width: 343px) {
+  #title{
+    font-size:30px;
+  }
+  .first{
+      font-size:15px;
+      margin-left:  0;
+      padding-left:   0;
+      margin-bottom:  0;
+  }
+  .second{
+     font-size:15px;
+     margin-left:  0;
+    padding-left: 0;
+    margin-top:0;
+  }
+  #link{
+    font-size:35px;
+  }
+}
