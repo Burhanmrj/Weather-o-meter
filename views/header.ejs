@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather app</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+
+</head>
+<body>
+  <div class="app-wrap">
+     <main>
+      <div class="current">
+        <div class="temp">Weather-O-Meter</div>
+         
+    </div>
+    </main>
+    <header>
+      <form class="aquiringlocation" method='post' action='/'><input type="text" autocomplete="off" class="search-box" placeholder="Location..." name="locationName" required />
+      <div class='wrapper'>
+        <button class="h" id="bttn" type="submit">Search</button>
+      </div>
+    </form>
+  </header>
+<div class="det">
+   <P id="place"><%=name%><%=country%><br>
+     <%=temperature%><br>
+      <img src="<%=url%>" onerror=null><br>
+      <%=description%>
+   </P>
+    <div class='temperaturedetails'>
+   
+      
+      <%=temp_min%><br>
+      <%=temp_max%><br>
+      <%=pressure%><br>
+      
+    </div>
+      <div class="description">
+       
+        <%=humidity%><br>
+        <%=visibility%><br>
+        <%=wind%>
+
+    </div>
+  </div>
+
+
+
+
+
+
+    </div>
+   
+   
+  </div>
+
+  
+</body>
+
+<%- include("partials/footer");-%>
