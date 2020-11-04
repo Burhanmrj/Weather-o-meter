@@ -10,6 +10,7 @@ body {
   background-image: url('../images/intro-bg.jpg');
   background-size: cover;
   background-position: top center;
+
 }
 .t{
     color: #FFF;
@@ -24,12 +25,12 @@ body {
     margin-bottom: 100px;
 }
 p{
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Lucida Console", Courier, monospace;
     padding:20px;
 
 }
 .contact{
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Lucida Console", Courier, monospace;
     padding:20px;
     color: #FFF;
     font-size: 20px;
@@ -41,6 +42,7 @@ p{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
   
 }
 
@@ -126,7 +128,7 @@ main {
     color:white !important;
     
 }
-#bttn{
+.bttn{
     color: #313131 ;
     text-decoration: none;
     background-color: grey;
@@ -142,6 +144,7 @@ main {
 }
 .wrapper{
     text-align: center;
+
 }
 
 
@@ -149,7 +152,7 @@ footer{
     background-color:grey;
     padding:20px;
     color:white;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Lucida Console", Courier, monospace;
 
 
 }
@@ -228,7 +231,7 @@ a:hover{
 }
 
 .det{
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Lucida Console", Courier, monospace;
     font-size:20px;
     color:#FFF;
     align-self: center;
@@ -344,5 +347,180 @@ a:hover{
   .doc{
     width:90%;
   }
+  
 
+}
+.advancedcurrent{
+  padding: 160px 20px 30px 20px;
+  font-size: 30px;
+  font-family: "Lucida Console", Courier, monospace;
+  margin:auto;
+  width:50%;
+}
+.box{
+  padding:10px;
+  margin:auto;
+  align-items: center !important ;
+  font-family: "Lucida Console", Courier, monospace;
+  color:#ffffff ;
+  width:70%;
+
+}
+.tommorow{
+ 
+    display: flex;
+    -webkit-box-flex: 1;
+    width:50%;
+    align-content:  left;
+    -webkit-box-pack: justify;
+    
+    justify-content: space-between;
+
+}
+
+#advancedplace{
+  padding:10px;
+  margin:auto;
+    width:50%;
+    font-size: 20px;
+    align-items:   center; 
+}
+.middleContent{
+  margin-bottom: 10px;
+}
+.anchor{
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: hsla(0,0%,50%,.5);
+    
+    padding: 0 12px;
+    margin-top: 10px;
+    height: 64px;
+    overflow: hidden;
+    
+}
+.info{
+      display: flex;
+    -webkit-box-flex: 1;
+   font-size: 20px;
+   font-weight: 900;
+       display: block;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding-right:30px;
+}
+.anchor .info{
+  align-self: center;
+}
+.anchor .temp1{
+    align-self: center;
+    white-space: nowrap;
+}
+.high{
+    font-size: 36px;
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.low{
+    font-size: 20px;
+    color: #7FFFD4;
+    line-height: 1.2;
+}
+.anchor .phrase{
+    align-self: center;
+    font-size: 18px;
+    width: 40%;
+    text-align:center;
+    padding-left:30px;
+}
+.collapsible {
+  
+  background: none;
+  cursor: pointer;
+  padding: 5px 0px 0px 0px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-color:white;
+  
+
+}
+.clickme{
+  text-align: center;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  font-size:20px;
+  transition:all 0.2s ease;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  background-color: hsla(0,0%,50%,.9);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display:flex;
+}
+.precipitation{
+  align-self: center;
+  font-size: 15px;
+  text-align: right;
+}
+.left{
+  margin-top: 20px;
+  margin-right: 10px;
+  flex:50%;
+  position: relative;
+  float: left;
+}
+.right{
+  margin-top: 20px;
+  margin-left: 10px;
+  flex:50%;
+  position: relative;
+  float:left;
+}
+.value{
+  margin-left: auto;
+    padding-left: 8px;
+    text-align: right;
+}
+.content p{
+  padding: 11px 0 10px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+.Date{
+  margin:auto;
+  text-align: center;
+  display: block;
+  font-size:13.5px;
+
+}
+.rotate {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+.rotate.down {
+    background: hsla(0,0%,50%,0);
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+.fas{
+  color:white;
+}
+#map{
+  height:50%;
+}
+#bt3{
+  align-content: auto;
 }

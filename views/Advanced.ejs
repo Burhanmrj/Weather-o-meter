@@ -1,0 +1,103 @@
+<%- include("partials/template");-%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/bb0ae03f5c.js" crossorigin="anonymous"></script>
+<h1 class="advancedcurrent"><%=aquiredLocation%><br>
+Weather forecast of the week
+</h1>
+<div>
+	
+	<div class="box">
+		<%for(var i=0;i<7;i++){%>
+		<% var t = new Date((parsedData.daily[i].dt)*1000)%>
+		<% var date = t.getDate()%>
+		<% var month = t.getMonth()%>
+
+		<div class="middleContent">
+			<div class="anchor">
+				
+				<div class="tommorow"> 
+					<h2 class="info"> <%=week[(day+i+1)%7]%>
+						<span class="Date">
+								<%=date%>/<%=month%>
+						</span>
+					</h2>
+					<%var icon=parsedData.daily[i].weather[0].icon%>
+					
+					<%const url = "http://openweathermap.org/img/wn/" + icon + "@2x.png"%>
+					<img src="<%=url%>" width="60px" height="60px" onerror=null>
+					<div class="temp1">
+						<span class="high">
+							<%=parsedData.daily[i].temp.max%>°
+						</span>
+						<span class="low">
+							/<%=parsedData.daily[i].temp.min%>°
+						</span>
+					</div>
+				</div>
+				<div class="phrase">
+						<%=parsedData.daily[i].weather[0].description%>
+				</div>
+				<div class="precipitation">
+						<i class='fas fa-cloud-rain'></i>
+						<%=parsedData.daily[i].pop*100%>%
+
+				</div>
+			</div>
+					<div class="clickme">
+						<button type="button" class="collapsible fas fa-angle-double-down rotate">
+							
+						</button>
+						<div class="content">
+						  <div class="left">
+						  	<p>Day <span class="value"><%=parsedData.daily[i].temp.day%>°</span>
+						  	<p>Pressure <span class="value"><%=parsedData.daily[i].pressure%>hPa</span></p>
+							<p>Humidity <span class="value"><%=parsedData.daily[i].humidity%>%</span></p>
+							<p>Wind Speed <span class="value"><%=parsedData.daily[i].wind_speed%>m/s</span></p>
+						  </div>
+						  <div class="right">
+						  	<p>Night <span class="value"><%=parsedData.daily[i].temp.night%>°</span>
+						  	<p>Clouds Chances <span class="value"><%=parsedData.daily[i].clouds%>%</span></p>
+						  	<p>UV index <span class="value"><%=parsedData.daily[i].uvi%></span></p>
+						  </div>
+						</div>
+					</div>
+	
+			
+		</div>	
+		<%}%>
+		
+	</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+</div>
+
+<%- include("partials/footer");-%>
+</body>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+
+  $(".rotate").click(function () {
+    $(this).toggleClass("down");
+})
+}
+</script>
