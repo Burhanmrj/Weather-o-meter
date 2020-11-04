@@ -145,6 +145,7 @@ main {
 .wrapper{
     text-align: center;
 
+
 }
 
 
@@ -157,28 +158,38 @@ footer{
 
 }
 .details{
-    padding:20px;
+    
     margin:20px;
     display: inline-block;
     float: left;
-    width: 35%;
+    width: 20%;
     position: relative;
     color:black;
-
+    text-align: center;
 }
 .cont{
-    padding:20px;
+    
     margin:20px;
     display: inline-block;
     position:relative;
-    
+     width: 20%;
+     text-align: center;
 }
 .doc{
-    padding:20px;
+    
+   margin:20px;
+    display: inline-block;
+    position:relative;
+    width: 20%;
+    text-align: center;
+}
+.map{
+    
     margin:20px;
     display: inline-block;
     position:relative;
-    width:35%;
+    width: 20%;
+    text-align: center;
 }
 a{
     text-decoration: none;
@@ -451,13 +462,11 @@ a:hover{
 .clickme{
   text-align: center;
 }
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
   font-size:20px;
   transition:all 0.2s ease;
 }
 
-/* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 0 18px;
   background-color: hsla(0,0%,50%,.9);

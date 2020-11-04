@@ -13,7 +13,7 @@
   <div class="app-wrap">
      <main>
       <div class="current">
-        <div class="temp">Weather-O-Meter</div>
+        <a id="link" href="/"><div class="temp">Weather-O-Meter</div></a>
          
     </div>
     </main>
@@ -22,8 +22,9 @@
         <input type="text" autocomplete="off" class="search-box" placeholder="Location..." name="locationName" required />
       <div class='wrapper'>
         <button class="h bttn" id="bt1" type="submit">Search</button>
-        <button class="h bttn" id="bt2" type="submit">Advanced Search</button>
-        <button class='h bttn' id="bt3" onclick="location.href='leaflet-owm'"><i class='far fa-map'></i></button>
+        <button class="h bttn" id="bt2" type="submit">Advanced Search<br></button>
+        
+        
       </div>
     </form>
     
@@ -53,7 +54,8 @@
         <%=wind%>
 
     </div>  
-  </div>
+</div>
+
 </div> 
 </body>
 <script>
@@ -63,6 +65,11 @@
   $("#bt2").on('click', function() {
   $("#formadduser").attr("action", "/Advanced");
 });
+  $("#bt3").on('click',function(){
+    
+    window.location.href='leaflet-owm';
+    window.required='false';
+  })
 </script>
 
 <%- include("partials/footer");-%>
