@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const app = express();
 const ejs = require("ejs");
 const https = require("https")
+const alert = require('alert');
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
@@ -44,8 +46,9 @@ app.get("/",function(req,res){
 							pressure:null,
 							visibility: null,
 							humidity:null,
-							wind:null
-						})
+							wind:null,
+							
+													})
 })
 app.get("/About",function(req,res){
 	res.render("About",{aboutcontent:aboutcontent})
@@ -74,7 +77,25 @@ app.post("/",function(req,res){
 	https.get(url,function(response){
 
 		console.log(response.statusCode);
-
+		if(response.statusCode===404)
+		{
+			alert("enter valid location")
+			res.render("header",{	name:null,
+							temperature: null,
+							url:null,
+							temp_min:null,
+							temp_max:null,
+							description: null,
+							country:null,
+							pressure:null,
+							visibility: null,
+							humidity:null,
+							wind:null,
+							
+						});
+		}
+		else
+		{
 			response.on("data", function(data){
 				parsedData =JSON.parse(data);
 				temperature =parsedData.main.temp+"°C";
@@ -106,8 +127,9 @@ app.post("/",function(req,res){
 									})
 												});
 
-
+}
 										});
+		
 });
 app.post("/Advanced",function(req,resp){
 

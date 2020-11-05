@@ -8,11 +8,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alert": "^5.0.5",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
     "node": "^14.13.1",
     "node-geocoder": "^3.27.0",
+    "node-popup": "^0.1.14",
     "nodemon": "^2.0.6",
     "request-promise": "^4.2.6"
   },
