@@ -42,14 +42,13 @@
     <div class='temperaturedetails'>
    
       
-      <%=temp_min%><br>
       <%=temp_max%><br>
+      <%=humidity%><br>
       <%=pressure%><br>
       
     </div>
       <div class="description">
-       
-        <%=humidity%><br>
+        <%=temp_min%><br>
         <%=visibility%><br>
         <%=wind%>
 
@@ -65,11 +64,6 @@
   $("#bt2").on('click', function() {
   $("#formadduser").attr("action", "/Advanced");
 });
-  $("#bt3").on('click',function(){
-    
-    window.location.href='leaflet-owm';
-    window.required='false';
-  })
 </script>
 
 <%- include("partials/footer");-%>

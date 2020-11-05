@@ -30,7 +30,7 @@ Weather forecast of the week
 							<%=parsedData.daily[i].temp.max%>°
 						</span>
 						<span class="low">
-							/<%=parsedData.daily[i].temp.min%>°
+						/<%=parsedData.daily[i].temp.min%>°
 						</span>
 					</div>
 				</div>
@@ -47,22 +47,29 @@ Weather forecast of the week
 						<button type="button" class="collapsible fas fa-angle-double-down rotate">
 							
 						</button>
+						
 						<div class="content">
+							<div class="phrase1"><%=parsedData.daily[i].weather[0].description%></div>
+							<div class="outsidecontent">
 						  <div class="left">
-						  	<p>Day <span class="value"><%=parsedData.daily[i].temp.day%>°</span>
+						  	<p>Day <span class="value"><%=parsedData.daily[i].temp.day%>°</span></p>
 						  	<p>Pressure <span class="value"><%=parsedData.daily[i].pressure%>hPa</span></p>
 							<p>Humidity <span class="value"><%=parsedData.daily[i].humidity%>%</span></p>
-							<p>Wind Speed <span class="value"><%=parsedData.daily[i].wind_speed%>m/s</span></p>
+							<p>Wind <span class="value"><%=parsedData.daily[i].wind_speed%>m/s</span></p>
 						  </div>
 						  <div class="right">
-						  	<p>Night <span class="value"><%=parsedData.daily[i].temp.night%>°</span>
-						  	<p>Clouds Chances <span class="value"><%=parsedData.daily[i].clouds%>%</span></p>
+						  	
+						  	<p>Night <span class="value"><%=parsedData.daily[i].temp.night%>°</span></p>
+						  	<p>Clouds <span class="value"><%=parsedData.daily[i].clouds%>%</span></p>
 						  	<p>UV index <span class="value"><%=parsedData.daily[i].uvi%></span></p>
 						  </div>
+						
 						</div>
+
+
 					</div>
 	
-			
+			</div>
 		</div>	
 		<%}%>
 		
@@ -70,14 +77,15 @@ Weather forecast of the week
 
 
 
+
+
+
+
+
+
+</div>
 </div>
 
-
-
-
-
-</div>
-</div>
 
 <%- include("partials/footer");-%>
 </body>
@@ -92,7 +100,7 @@ for (i = 0; i < coll.length; i++) {
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.maxHeight = 400 + "px";
     }
   });
 

@@ -247,7 +247,7 @@ a:hover{
     color:#FFF;
     align-self: center;
     padding:50px;
-    width:90%;
+    width:75%;
     
     
 }
@@ -256,7 +256,7 @@ a:hover{
     display: inline-block;
     width:50%;
     float:left;
-    padding: 0 20px 10px 0;
+    padding-right: 20px;
     text-align: center;
     
     
@@ -267,7 +267,7 @@ a:hover{
     
     width:50%;
     margin-left:50%;
-    padding: 0 0 10px 20px;
+    padding-left: 20px;
     text-align: center;
     
 
@@ -279,10 +279,7 @@ a:hover{
     font-size: 30px;
 }
  @media (max-device-width: 480px) and (min-width: 330px) {
-   .bttn{
-    padding:15px;
-   }
-   .details{
+        .details{
      width: 90%;
 
   }
@@ -300,9 +297,8 @@ a:hover{
   #link{
     font-size:30px;
   }
-
-  #place{
-    font-size:20px;
+  p{
+    font-size:17px;
   }
   .current .temp{
     font-size:35px;
@@ -323,69 +319,6 @@ a:hover{
   }
    #title{
     font-size:30px;
-  }
-  .temperaturedetails{
-    font-size: 16px;
-  }
-  .det{
-    padding:50px 5px 50px 5px;
-  }
-  .description{
-    font-size: 16px;
-  }
-  .box{
-    margin:10px !important;
-    width: 90% !important;
-  }
-
-  .advancedcurrent{
-    font-size: 15px !important;
-  }
-  .anchor .info{
-    font-size: 13px;
-    padding-right: 20px;  
-  }
-  .Date{
-    font-size: 7.7px !important;
-  }
-  .tommorow img{
-    width:27px;
-    height: 27px;
-    align-self: center;
-  }
-   .temp1 .high{
-    font-size: 15px;
-  }
-  .temp1 .low{
-    font-size: 9.7px;
-  }
-  .fa-cloud-rain{
-    font-size: 7px;
-  }
-
-  .precipitation{
-    font-size: 10px !important;
-  }
-  .phrase1{
-    font-size: 15px;
-  }
-  .outsidecontent{
-    font-size: 12px;
-   
-  }
-}
-
-
-
-@media(max-width: 1024px){
-  .anchor .phrase{
-   visibility: hidden;
-   width:35% !important;  
-  }
-}
-@media(min-width: 1024px){
-  .phrase1{
-   visibility: hidden;
   }
 }
 @media(max-device-width:760px) and (min-width:481px ){
@@ -415,46 +348,9 @@ a:hover{
   .second{
     width:90%;
   }
-  .advancedcurrent{
-    font-size: 25px !important;
-  }
-  .anchor .info{
-    font-size: 15px;
-    padding-right: 20px;  
-  }
-  .Date{
-    font-size: 10.1px !important;
-  }
-  .tommorow img{
-    width:40px;
-    height: 40px;
-    align-self: center;
-  }
-  .temp1 .high{
-    font-size: 20px;
-  }
-  .temp1 .low{
-    font-size: 13px;
-  }
-  .fa-cloud-rain{
-    font-size: 7px;
-  }
-
-  .precipitation{
-    font-size: 10px !important;
-  }
-  .outsidecontent{
-    font-size: 13px;
-   
-  }
-  
-
 }
 @media(max-width: 329px) and (min-width:272px) {
  
- header input{
-  padding: 8px 13px;
- }
   .first{
      width:90%;
       font-size:15px;
@@ -470,7 +366,7 @@ a:hover{
     margin-top:0;
   }
   #link{
-    font-size:20px;
+    font-size:30px;
   }
   p{
     font-size:17px;
@@ -481,93 +377,22 @@ a:hover{
    #title{
     font-size:30px;
   }
-  .bttn{
-    padding:12px;
-  }
-  .details{
-     width: 90%;
-
-  }
-  .cont{
+     .details{
      width: 90%;
 
   }
   .doc{
-     width: 90%;
+    width:90%;
+  }
+  
 
-  }
-  .map{
-     width: 90%;
-
-  }
-  .det{
-    font-size:15px;
-    padding:10px;
-  }
-  #place{
-    font-size:20px;
-  }
-.box{
-    margin:10px !important;
-    width: 90% !important;
-  }
-.advancedcurrent{
-    font-size: 20px !important;
-  }
-  .anchor .info{
-    font-size: 12px;
-    padding-right: 10px;  
-  }
-  .Date{
-    font-size: 9.1px !important;
-  }
-  .tommorow img{
-    width:30px;
-    height: 30px;
-    align-self: center;
-  }
-  .temp1 .high{
-    font-size: 13px;
-  }
-  .temp1 .low{
-    font-size: 10px;
-  }
-  .fa-cloud-rain{
-    font-size: 7px;
-  }
-
-  .precipitation{
-    font-size: 8.5px !important;
-  }
- .phrase1{
-    font-size: 13px;
-  }
-  .outsidecontent{
-    font-size: 9px;
-    display:block !important;
- }
-  .right {
-    
-    margin:0 10px 0 0 !important;
-  }
-  .left p,.right p{
-    font-size: 12px;
-  }
-  .value{
-    text-align: right;
-  }
 }
-
-
-
-
 .advancedcurrent{
   padding: 160px 20px 30px 20px;
   font-size: 30px;
   font-family: "Lucida Console", Courier, monospace;
   margin:auto;
-  width:100%;
-  text-align: center;
+  width:50%;
 }
 .box{
   padding:10px;
@@ -605,7 +430,7 @@ a:hover{
     display: -ms-flexbox;
     display: flex;
     background: hsla(0,0%,50%,.5);
-    border-radius: 16px 0px 16px 0px; 
+    
     padding: 0 12px;
     margin-top: 10px;
     height: 64px;
@@ -674,34 +499,26 @@ a:hover{
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  border-radius: 16px 0px 16px 0px;
-}
-.outsidecontent{
-    
-    display: flex;
+  display:flex;
 }
 .precipitation{
   align-self: center;
   font-size: 15px;
   text-align: right;
 }
-.phrase1{
-  padding:10px 10px 0 10px ;
-  width:100%;
-  text-align: center ;
-  
-}
 .left{
   margin-top: 20px;
   margin-right: 10px;
   flex:50%;
-  
+  position: relative;
+  float: left;
 }
 .right{
   margin-top: 20px;
   margin-left: 10px;
   flex:50%;
-  
+  position: relative;
+  float:left;
 }
 .value{
   margin-left: auto;
