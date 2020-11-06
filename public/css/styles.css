@@ -373,6 +373,9 @@ a:hover{
     font-size: 12px;
    
   }
+  .documentation{
+    font-size: 14px !important
+  }
 }
 
 
@@ -446,6 +449,9 @@ a:hover{
   .outsidecontent{
     font-size: 13px;
    
+  }
+  .documentation{
+    font-size: 16px !important
   }
   
 
@@ -530,7 +536,7 @@ a:hover{
     font-size: 13px;
   }
   .temp1 .low{
-    font-size: 10px;
+    font-size: 11.5px;
   }
   .fa-cloud-rain{
     font-size: 7px;
@@ -556,6 +562,12 @@ a:hover{
   .value{
     text-align: right;
   }
+  .documentation{
+    font-size: 12px !important
+  }
+  .leaflet-container {
+    
+    font: 25px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif !important;
 }
 
 
@@ -741,4 +753,13 @@ a:hover{
 }
 #bt3{
   align-content: auto;
+}
+.documentation{
+  margin:40px 40px 0 40px;
+  font-size: 20px;
+  color:#FFF;
+  font-family: "Lucida Console", Courier, monospace;
+}
+ul{
+  padding:10px;
 }

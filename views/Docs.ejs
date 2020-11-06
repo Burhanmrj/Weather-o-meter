@@ -1,4 +1,38 @@
 <%-include("partials/template")-%>
+
+
+
+
+</div>
+<div class="documentation">
+The weather gathering is done through the OpenWeatherMap api. We have used two api namely:
+	<ul style="list-style-type:square">
+		<li><t>Current weather data: Access current weather data for any location on Earth including over 200,000 cities! We collect and process weather data from different sources such as global and local weather models, satellites, radars and vast network of weather stations. Data is available in JSON, XML, or HTML format.</t><br>
+		This api requires the name of the location (preferably city). After aquiring the name the web app makes https request to the api to gather the weather data, which is in the form of JSON.
+
+		</li>
+		<br>
+		<li><t>One Call API: Make just one API call and get all your essential weather data for a specific location with our new OpenWeather One Call API.</t><br>
+		This api requires the latitude and longitude of the location. In order to get the latitude and longitude we used the geoCoder which basically retrieves the latitude and longitude from just the name of the location. We used the geoCoder of openstreetmap.  After aquiring the coordinates, the web app makes https request to the api to gather the weather data, which is in the form of JSON.
+		</li>
+	</ul>
+</div>
+<div class="documentation">
+For the map section We used the Weather maps 1.0 integrated with the Leaflet library.<br>
+OpenWeatherMap offers some TileLayers: 
+	<ul>
+		<li>Pressure Contours.</li>
+		<li>Clouds</li>
+		<li>Clouds Classic</li>
+		<li>Precipitation</li>
+		<li>Precipitation Classic</li>
+		<li>Rain</li>
+		<li>Rain Classic</li>
+		<li>Snow</li>
+		<li>Temperature</li>
+		<li>Wind Speed</li>
+		<li>Pressure</li>
+	</ul>
 </div>
 </div>
 

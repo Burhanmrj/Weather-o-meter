@@ -18,6 +18,7 @@ let parsedData={};
 var lat={};
 var lon={};
 var url2={};
+var message={};
 var today = new Date();
 var day=today.getDay();
 var week=['SUN','MON','TUE','WED','THR','FRI','SAT'];
@@ -47,6 +48,7 @@ app.get("/",function(req,res){
 							visibility: null,
 							humidity:null,
 							wind:null,
+							message:null
 							
 													})
 })
@@ -77,9 +79,9 @@ app.post("/",function(req,res){
 	https.get(url,function(response){
 
 		console.log(response.statusCode);
-		if(response.statusCode===404)
+		if(response.statusCode==404)
 		{
-			alert("enter valid location")
+			message="Enter a valid location";
 			res.render("header",{	name:null,
 							temperature: null,
 							url:null,
@@ -91,6 +93,7 @@ app.post("/",function(req,res){
 							visibility: null,
 							humidity:null,
 							wind:null,
+							message:message
 							
 						});
 		}
@@ -123,7 +126,8 @@ app.post("/",function(req,res){
 										pressure:pressure,
 										humidity: humidity,
 										visibility: visibility,
-										wind:wind
+										wind:wind,
+										message:null
 									})
 												});
 
@@ -138,14 +142,18 @@ app.post("/Advanced",function(req,resp){
 	const units = "metric";
 	geoCoder.geocode(aquiredLocation)
   .then((res)=> {
+  	
+  	var country = res[0].country;
+  	var state = res[0].state;
     lat=res[0].latitude;
     lon=res[0].longitude;
     
   
-  	console.log(lat,lon);
+  	
  	url2="https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&exclude=hourly,minutely&units="+units+"&appid="+api;
 	console.log(url2)
 	https.get(url2,function(response){
+		console.log(response.statusCode)
 		response.on("data", function(data){
 				parsedData =JSON.parse(data);
 				console.log(parsedData)
@@ -153,10 +161,13 @@ app.post("/Advanced",function(req,resp){
 										aquiredLocation:aquiredLocation,
 										week:week,
 										day:day,
-										months:months
+										months:months,
+										country:country,
+										state:state
 									})
 			});
 	});
+
 	 });
   
 });

@@ -2,6 +2,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/bb0ae03f5c.js" crossorigin="anonymous"></script>
 <h1 class="advancedcurrent"><%=aquiredLocation%><br>
+	<%=state%>,<%=country%><br>
 Weather forecast of the week
 </h1>
 <div>
@@ -9,8 +10,8 @@ Weather forecast of the week
 	<div class="box">
 		<%for(var i=0;i<7;i++){%>
 		<% var t = new Date((parsedData.daily[i].dt)*1000)%>
-		<% var date = t.getDate()%>
-		<% var month = t.getMonth()%>
+		<% var date = t.getDate()+1%>
+		<% var month = t.getMonth()+1%>
 
 		<div class="middleContent">
 			<div class="anchor">

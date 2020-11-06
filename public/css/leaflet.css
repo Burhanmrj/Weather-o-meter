@@ -263,7 +263,21 @@
 /* general typography */
 .leaflet-container {
 	font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+
 	}
+
+@media (max-device-width: 760px){
+   .leaflet-container {
+	font: 20px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+	}
+}
+@media (max-device-width: 550px) and (min-width: 272px){
+   .leaflet-container {
+	font: 26px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+	}
+}
 
 
 /* general toolbar styles */
