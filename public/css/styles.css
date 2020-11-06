@@ -565,7 +565,7 @@ a:hover{
   .documentation{
     font-size: 12px !important
   }
-  
+
 }
 
 
@@ -746,9 +746,7 @@ a:hover{
 .fas{
   color:white;
 }
-#map{
-  height:50%;
-}
+
 #bt3{
   align-content: auto;
 }
