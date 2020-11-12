@@ -61,7 +61,7 @@ Weather forecast of the week
 						  <div class="right">
 						  	
 						  	<p>Night <span class="value"><%=parsedData.daily[i].temp.night%>°</span></p>
-						  	<p>Clouds <span class="value"><%=parsedData.daily[i].clouds%>%</span></p>
+						  	<p>Clouds <span class="value"><%=parseInt(parsedData.daily[i].clouds)%>%</span></p>
 						  	<p>UV index <span class="value"><%=parsedData.daily[i].uvi%></span></p>
 						  </div>
 						
