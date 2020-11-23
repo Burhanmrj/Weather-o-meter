@@ -1,5 +1,4 @@
 # Weather-o-meter
-https://weather-o-meter.herokuapp.com/
 The weather gathering is done through the OpenWeatherMap api. We have used two api namely:
 Current weather data: Access current weather data for any location on Earth including over 200,000 cities! We collect and process weather data from different sources such as global and local weather models, satellites, radars and vast network of weather stations. Data is available in JSON, XML, or HTML format.
 This api requires the name of the location (preferably city). After aquiring the name the web app makes https request to the api to gather the weather data, which is in the form of JSON.
